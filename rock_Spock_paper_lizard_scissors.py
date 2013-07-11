@@ -1,7 +1,20 @@
 # Rock-paper-scissors-lizard-Spock template
 
+
+# The key idea of this program is to equate the strings
+# "rock", "paper", "scissors", "lizard", "Spock" to numbers
+# as follows:
+#
+# 0 - rock
+# 1 - Spock
+# 2 - paper
+# 3 - lizard
+# 4 - scissors
+
+
 import random
 
+# helper functions
 
 def number_to_name(number):
     if number == 0:
@@ -17,6 +30,7 @@ def number_to_name(number):
     else:
         print 'the name is incorrect'
     return name
+
     
 def name_to_number(name):
     if name == 'rock':
@@ -32,32 +46,33 @@ def name_to_number(name):
     else:
         print 'the name is incorrect'
     return number
-
+        
 
 def rpsls(name): 
-
+    # convert name to player_number using name_to_number
     player_number = name_to_number(name)
 
+    # compute random guess for comp_number using random.randrange()
     comp_number = random.randrange(0,5)
-
+    # compute difference of player_number and comp_number modulo five
     diff = (player_number - comp_number) % 5
-
+    # use if/elif/else to determine winner
     if diff > 2:
         result = "Computer wins!"
     elif diff == 0:
         result = "Player and computer tie!"
     else:
         result = "Player wins!"
-        
+    # convert comp_number to name using number_to_name
     player_guess = name
     computer_guess = number_to_name(comp_number)
-
+    # print results
     print ''
     print 'Player chooses', player_guess
     print 'Computer chooses', computer_guess
     print result
     
-# test the code
+# test your code
 rpsls("rock")
 rpsls("Spock")
 rpsls("paper")
