@@ -1,4 +1,4 @@
-# Blackjack
+# Mini-project #6 - Blackjack
 
 import simplegui
 import random
@@ -208,3 +208,4 @@ frame.set_draw_handler(draw)
 frame.start()
 deal()
 
+#http://www.codeskulptor.org/#user14_mDLmnJZxfhsenjk.py

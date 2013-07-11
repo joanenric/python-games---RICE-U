@@ -1,4 +1,4 @@
-# "Stopwatch: The Game"
+# template for "Stopwatch: The Game"
 
 import simplegui
 
@@ -63,7 +63,7 @@ def tick():
 
 # define draw handler
 def draw_handler(canvas):
-    canvas.draw_text(format(time), (108, 160), 42, "Red")
+    canvas.draw_text(format(time), (75, 160), 52, "Red")
     canvas.draw_text(result(), (250, 40), 20, "Green")
 
     
@@ -81,3 +81,7 @@ timer = simplegui.create_timer(100,tick)
 
 # start frame
 f.start()
+
+
+
+# http://www.codeskulptor.org/#user12_Aqtn0uQqk2la15t.py

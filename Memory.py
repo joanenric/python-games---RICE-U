@@ -20,7 +20,6 @@ def init():
     turn  = [-1, -2]
     count = 0
     label.set_text("Moves = " + str(count))
-
      
 # define event handlers
 def mouseclick(pos):
@@ -69,4 +68,4 @@ frame.set_draw_handler(draw)
 # get things rolling
 frame.start()
 
-
+#http://www.codeskulptor.org/#user14_VXTE6MytW8vnMhI.py

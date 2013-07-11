@@ -22,7 +22,9 @@ paddle2_vel = 0
 score1 = 0
 score2 = 0
 total_score = "0 / 0"
-
+# helper function that spawns a ball by updating the 
+# ball's position vector and velocity vector
+# if right is True, the ball's velocity is upper right, else upper left
 
 
 def ball_init(right):
@@ -135,3 +137,5 @@ button2 = frame.add_button("Restart", new_game, 50)
 frame.start()
 new_game()
 
+
+# http://www.codeskulptor.org/#user13_wan0gCdD3GFk857.py

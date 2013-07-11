@@ -1,8 +1,11 @@
-
+# template for "Guess the number" mini-project
+# input will come from buttons and an input field
+# all output for the game will be printed in the console
 import random
 import math
 import simplegui
 
+# initialize global variables used in your code
 
 range_max = 100
 max_turns = math.ceil(math.log(range_max+1,2))
@@ -13,19 +16,18 @@ def init():
     global turn
     turn = 0
     print ""
-    print "New game. the range is from 0 to",range_max
+    print "New game. The range is from 0 to",range_max
     print "Number of remaining guesses is", max_turns
     print ""
 
+# define event handlers for control panel
     
 def range100():
-    global range_max
-    range_max = 100
-    global max_turns
-    max_turns = math.ceil(math.log(range_max+1,2))    
+    # button that changes range to range [0,100) and restarts
     init()
     
 def range1000():
+    # button that changes range to range [0,1000) and restarts
     global range_max
     range_max = 1000
     global max_turns
@@ -33,7 +35,7 @@ def range1000():
     init()
    
 def get_input(guess):
-    # main game logic 
+    # main game logic goes here
     global turn
     turn +=1
     guess = float(guess)
@@ -65,3 +67,4 @@ frame.add_input("Enter a guess", get_input, 200)
 frame.start()
 init()
 
+# http://www.codeskulptor.org/#user11_Ptehs92hjB9Aana.py
